@@ -1,7 +1,8 @@
 import random
+import openpyxl
 
 class Student:
-    name = 'defaule'
+    name = 'default'
     id = 0
     chineseGrade = 0
     englishGrade = 0
@@ -36,7 +37,7 @@ def quickSort(left, right):
     if(left < right):
         randomLeft = left
         randomBase = random.randint(left, right)
-        
+
         randomTemp = studentList[randomLeft]
         studentList[randomLeft] = studentList[randomBase]
         studentList[randomBase] = randomTemp
