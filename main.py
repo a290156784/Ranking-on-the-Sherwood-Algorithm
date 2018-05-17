@@ -1,3 +1,5 @@
+import random
+
 class Student:
     name = 'defaule'
     id = 0
@@ -32,6 +34,13 @@ listLenth = len(studentList)
 
 def quickSort(left, right):
     if(left < right):
+        randomLeft = left
+        randomBase = random.randint(left, right)
+        
+        randomTemp = studentList[randomLeft]
+        studentList[randomLeft] = studentList[randomBase]
+        studentList[randomBase] = randomTemp
+
         mid = partition(left, right)
         quickSort(left, mid-1)
         quickSort(mid+1, right)
