@@ -28,3 +28,39 @@ student9 = Student('xiang', 10009, 91, 66, 92)
 studentList = studentList + [student1, student2, student3, student4, student5, student6, student7, student8, student9]
 
 listLenth = len(studentList)
+
+
+def quickSort(left, right):
+    if(left < right):
+        mid = partition(left, right)
+        quickSort(left, mid-1)
+        quickSort(mid+1, right)
+
+
+def partition(l, r):
+    i = l
+    j = r
+    temp = studentList[l].average
+
+    while i!=j:
+        while studentList[j].average<=temp and j>i:
+            j -= 1
+        while studentList[i].average>=temp and i<j:
+            i += 1
+        temp2 = studentList[i]
+        studentList[i] = studentList[j]
+        studentList[j] = temp2
+
+    temp3 = studentList[l]
+    studentList[l] = studentList[i]
+    studentList[i] =temp3
+    return i
+
+
+quickSort(0, listLenth-1)
+
+for currentOutputStudent in studentList:
+    print(currentOutputStudent.name, '   ', currentOutputStudent.id, '   ',\
+    currentOutputStudent.chineseGrade, '   ', currentOutputStudent.englishGrade, '   ',\
+    currentOutputStudent.mathGrade, '   ', currentOutputStudent.average)
+    print('\n')
