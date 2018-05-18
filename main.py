@@ -1,20 +1,22 @@
 import random
-import openpyxl
 
-class Student:
+
+class Student:                                                     # 学生类
     name = 'default'
     id = 0
     chineseGrade = 0
     englishGrade = 0
     mathGrade = 0
     average = 0
-    def __init__(self, inputName, inputID, inputChiGrade, inputEngGrade, inputMathGrade):
+
+    def __init__(self, inputName, inputID, inputChiGrade, inputEngGrade, inputMathGrade):   # 用于初始化学生类成员变量的值
         self.name = inputName
         self.id = inputID
         self.chineseGrade = inputChiGrade
         self.englishGrade = inputEngGrade
         self.mathGrade = inputMathGrade
         self.average = (inputMathGrade+inputMathGrade+inputEngGrade)/3
+
 
 studentList = []
 
@@ -35,24 +37,24 @@ listLenth = len(studentList)
 
 def quickSort(left, right):
     if(left < right):
-        randomLeft = left
+        randomLeft = left                                           # 随机产生一个范围在当前列表内的整数
         randomBase = random.randint(left, right)
 
-        randomTemp = studentList[randomLeft]
+        randomTemp = studentList[randomLeft]                        # 将随机选出的元素交换至最左侧设为基准数
         studentList[randomLeft] = studentList[randomBase]
         studentList[randomBase] = randomTemp
 
-        mid = partition(left, right)
-        quickSort(left, mid-1)
+        mid = partition(left, right)                                # 进行排序运算，找出当前轮次基准数的位置
+        quickSort(left, mid-1)                                      # 分治
         quickSort(mid+1, right)
 
 
-def partition(l, r):
+def partition(l, r):                                                # 快速排序
     i = l
     j = r
     temp = studentList[l].average
 
-    while i!=j:
+    while i!=j:                                                     # 找出比基准数小和大的数，分别排至基准数左右
         while studentList[j].average<=temp and j>i:
             j -= 1
         while studentList[i].average>=temp and i<j:
@@ -61,7 +63,7 @@ def partition(l, r):
         studentList[i] = studentList[j]
         studentList[j] = temp2
 
-    temp3 = studentList[l]
+    temp3 = studentList[l]                                          # 将位于列表最左侧的基准数交换至其应该在的位置
     studentList[l] = studentList[i]
     studentList[i] =temp3
     return i
