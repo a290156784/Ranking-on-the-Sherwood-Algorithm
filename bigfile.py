@@ -67,8 +67,8 @@ def createSonFile(fileCount, tempList, lineCount):
 
     with open(fileName, 'w+', newline='') as file:
         writer = csv.writer(file)
-        for row in tempList:
-            writer.writerow(row)
+        for i in range(lineCount):
+            writer.writerow(tempList[i])
 
 
 def splitBigFile(filePath):
@@ -80,7 +80,7 @@ def splitBigFile(filePath):
         bigFileReader = csv.reader(bigFile)
         for currentReadLine in bigFileReader:
             tempList[lineCount] = currentReadLine
-            tempList[lineCount].append((float(tempList[lineCount][2], 10) + float(tempList[lineCount][3], 10) + float(tempList[lineCount][4], 10))/3)
+            tempList[lineCount].append((int(tempList[lineCount][2], 10) + int(tempList[lineCount][3], 10) + int(tempList[lineCount][4], 10))/3)
             lineCount += 1
 
             if lineCount == 100:
