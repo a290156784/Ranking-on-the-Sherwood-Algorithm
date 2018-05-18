@@ -3,16 +3,45 @@ import random
 
 
 
-def mergeSonFile(fileCount):
+def mergeSonFile():
+    with open('SortedFile.txt', 'w+') as sortedFile:
 
-    fileAName = 'sonFile' + str(1) + '.txt'
-    fileBName = 'sonFile' + str(2) + '.txt'
+        fileAName = 'sonFile' + str(1) + '.txt'
+        fileBName = 'sonFile' + str(2) + '.txt'
 
-    with open(fileAName, 'r') as fileA:
-        with open(fileBName, 'r') as fileB:
+        with open(fileAName, 'r') as fileA:
+            with open(fileBName, 'r') as fileB:
 
+                currentAline = fileA.readline()
+                currentBline = fileB.readline()
 
+                while currentAline and currentBline:
+                    currentA = int(currentAline.rstrip('\n'), 10)
+                    currentB = int(currentBline.rstrip('\n'), 10)
 
+                    if currentA >= currentB:
+                        if currentAline.find('\n') == -1:
+                            currentAline = currentAline + '\n'
+                        sortedFile.write(currentAline)
+                        currentAline = fileA.readline()
+
+                    else:
+                        if currentBline.find('\n') == -1:
+                            currentBline = currentBline + '\n'
+                        sortedFile.write(currentBline)
+                        currentBline = fileB.readline()
+
+                while currentAline:
+                    if currentAline.find('\n') == -1:
+                        currentAline = currentAline + '\n'
+                    sortedFile.write(currentAline)
+                    currentAline = fileA.readline()
+
+                while currentBline:
+                    if currentBline.find('\n') == -1:
+                        currentBline = currentBline + '\n'
+                    sortedFile.write(currentBline)
+                    currentBline = fileB.readline()
 
 
 def createSonFile(fileCount, tempList, lineCount):
@@ -52,3 +81,4 @@ def splitBigFile():
 
 
 fileCount = splitBigFile()
+mergeSonFile()
