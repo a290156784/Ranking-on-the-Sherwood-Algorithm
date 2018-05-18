@@ -2,46 +2,58 @@
 import random
 
 
+def copyTempToSortedFile():
+    with open('tempFile.txt', 'r') as tempFile:
+        with open('SortedFile.txt', 'w+') as sortedFile:
+            for currentReadLine in tempFile:
+                sortedFile.write(currentReadLine)
 
-def mergeSonFile():
+
+def mergeSonFile(sonFileNum):
+    sonFileName = 'sonFile' + str(sonFileNum) + '.txt'
+
+    with open('tempFile.txt', 'w+') as tempFile:
+        with open('SortedFile.txt', 'r') as sortedFile:
+            with open(sonFileName, 'r') as sonFile:
+
+                    sortedFileLine = sortedFile.readline()
+                    sonFileLine = sonFile.readline()
+
+                    while sortedFileLine and sonFileLine:
+                        currentSortedNum = int(sortedFileLine.rstrip('\n'), 10)
+                        currentSonNum = int(sonFileLine.rstrip('\n'), 10)
+
+                        if currentSortedNum >= currentSonNum:
+                            tempFile.write(sortedFileLine)
+                            sortedFileLine = sortedFile.readline()
+
+                        else:
+                            if sonFileLine.find('\n') == -1:
+                                sonFileLine = sonFileLine + '\n'
+                            tempFile.write(sonFileLine)
+                            sonFileLine = sonFile.readline()
+
+                    while sortedFileLine:
+                        tempFile.write(sortedFileLine)
+                        sortedFileLine = sortedFile.readline()
+
+                    while sonFileLine:
+                        if sonFileLine.find('\n') == -1:
+                            sonFileLine = sonFileLine + '\n'
+                        tempFile.write(sonFileLine)
+                        sonFileLine = sonFile.readline()
+
+    copyTempToSortedFile()
+
+
+def copyFirstSonFileToSortedFile():
     with open('SortedFile.txt', 'w+') as sortedFile:
+        with open('sonFile1.txt', 'r') as sonFile1:
 
-        fileAName = 'sonFile' + str(1) + '.txt'
-        fileBName = 'sonFile' + str(2) + '.txt'
-
-        with open(fileAName, 'r') as fileA:
-            with open(fileBName, 'r') as fileB:
-
-                currentAline = fileA.readline()
-                currentBline = fileB.readline()
-
-                while currentAline and currentBline:
-                    currentA = int(currentAline.rstrip('\n'), 10)
-                    currentB = int(currentBline.rstrip('\n'), 10)
-
-                    if currentA >= currentB:
-                        if currentAline.find('\n') == -1:
-                            currentAline = currentAline + '\n'
-                        sortedFile.write(currentAline)
-                        currentAline = fileA.readline()
-
-                    else:
-                        if currentBline.find('\n') == -1:
-                            currentBline = currentBline + '\n'
-                        sortedFile.write(currentBline)
-                        currentBline = fileB.readline()
-
-                while currentAline:
-                    if currentAline.find('\n') == -1:
-                        currentAline = currentAline + '\n'
-                    sortedFile.write(currentAline)
-                    currentAline = fileA.readline()
-
-                while currentBline:
-                    if currentBline.find('\n') == -1:
-                        currentBline = currentBline + '\n'
-                    sortedFile.write(currentBline)
-                    currentBline = fileB.readline()
+            for currentReadLine in sonFile1:
+                if currentReadLine.find('\n') == -1:
+                    currentReadLine = currentReadLine + '\n'
+                sortedFile.write(currentReadLine)
 
 
 def createSonFile(fileCount, tempList, lineCount):
@@ -81,4 +93,7 @@ def splitBigFile():
 
 
 fileCount = splitBigFile()
-mergeSonFile()
+copyFirstSonFileToSortedFile()
+
+for i in range((fileCount-1)):
+    mergeSonFile((i+2))
