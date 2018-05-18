@@ -39,6 +39,7 @@ def mergeSonFile(sonFileNum):
                             try:
                                 sortedFileLine = next(sortedReader)
                             except StopIteration:
+                                flag = 0
                                 break
 
                         else:
@@ -46,16 +47,17 @@ def mergeSonFile(sonFileNum):
                             try:
                                 sonFileLine = next(sonReader)
                             except StopIteration:
+                                flag = 1
                                 break
 
-                    while sortedFileLine:
+                    while flag != 0:
                         writer.writerow(sortedFileLine)
                         try:
                             sortedFileLine = next(sortedReader)
                         except StopIteration:
                             break
 
-                    while sonFileLine:
+                    while flag != 1:
                         writer.writerow(sonFileLine)
                         try:
                             sonFileLine = next(sonReader)
