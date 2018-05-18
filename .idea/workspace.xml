@@ -4,6 +4,10 @@
     <list default="true" id="3f1be42c-0c91-4c3a-aba7-512a19e72855" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bigfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/bigfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sonFile1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/sonFile1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sonFile2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/sonFile2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sonFile3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/sonFile3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sonFile4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/sonFile4.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,8 +17,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Ranking_on_the_Sherwood_Algorithm$main.coverage" NAME="main Coverage Results" MODIFIED="1526665987972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Ranking_on_the_Sherwood_Algorithm$bigfile.coverage" NAME="bigfile Coverage Results" MODIFIED="1526647273286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Ranking_on_the_Sherwood_Algorithm$main.coverage" NAME="main Coverage Results" MODIFIED="1526669957967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Ranking_on_the_Sherwood_Algorithm$bigfile.coverage" NAME="bigfile Coverage Results" MODIFIED="1526668627055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Ranking_on_the_Sherwood_Algorithm$readTest.coverage" NAME="readTest Coverage Results" MODIFIED="1526628247453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Ranking_on_the_Sherwood_Algorithm$test.coverage" NAME="test Coverage Results" MODIFIED="1526659755094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -32,8 +36,8 @@
       <file leaf-file-name="bigfile.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bigfile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
+            <state relative-caret-position="538">
+              <caret line="116" column="34" selection-start-line="116" selection-start-column="34" selection-end-line="116" selection-end-column="34" />
               <folding>
                 <element signature="e#9#19#0" expanded="true" />
               </folding>
@@ -41,11 +45,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="quicksort.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SortedFile.csv" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SortedFile.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5427" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="quicksort.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quicksort.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="544">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -63,6 +74,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>txt</find>
+      <find>tempFile</find>
+      <find>，</find>
+      <find>open</find>
+      <find>sonFileLengh</find>
+      <find>next</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -103,23 +119,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Ranking-on-the-Sherwood-Algorithm" type="cbb8eebc:String" user="Ranking-on-the-Sherwood-Algorithm" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Ranking-on-the-Sherwood-Algorithm" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ranking-on-the-Sherwood-Algorithm" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Ranking-on-the-Sherwood-Algorithm" type="cbb8eebc:String" user="Ranking-on-the-Sherwood-Algorithm" />
             </path>
           </expand>
           <select />
@@ -211,8 +227,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.bigfile" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -240,29 +256,30 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="798" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952926" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3281027" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5007153" side_tool="true" weight="0.26676178" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.26676178" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32952926" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32952926" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26676178" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32952926" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5406562" visible="true" weight="0.21459228" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49928468" weight="0.32952926" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5378031" visible="true" weight="0.22031474" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="5" />
-      <window_info id="Structure" order="1" sideWeight="0.4593438" side_tool="true" visible="true" weight="0.21459228" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Structure" order="1" sideWeight="0.46219686" side_tool="true" visible="true" weight="0.22031474" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="12" weight="0.32952926" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32952926" />
       <window_info anchor="right" x="0" y="0" width="310" height="598" id="Documentation" order="3" weight="0.3297568" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Coverage" order="6" side_tool="true" />
     </layout>
@@ -277,6 +294,54 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
+          <folding>
+            <element signature="e#9#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quicksort.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
+          <folding>
+            <element signature="e#9#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quicksort.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -399,32 +464,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/readTest.py" />
     <entry file="file://$PROJECT_DIR$/tempFile.txt" />
-    <entry file="file://$PROJECT_DIR$/sonFile3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1109" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sonFile2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1109" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sonFile1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1041">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SortedFile.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="338" column="2" lean-forward="true" selection-start-line="338" selection-start-column="2" selection-end-line="338" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sonFile3.txt" />
+    <entry file="file://$PROJECT_DIR$/sonFile2.txt" />
+    <entry file="file://$PROJECT_DIR$/sonFile1.txt" />
+    <entry file="file://$PROJECT_DIR$/SortedFile.txt" />
     <entry file="file://$PROJECT_DIR$/test.csv" />
     <entry file="file://$PROJECT_DIR$/test.py" />
+    <entry file="file://$PROJECT_DIR$/quicksort.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5359" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -432,41 +489,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sonFile2.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sonFile3.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student.csv">
+    <entry file="file://$PROJECT_DIR$/sonFile1.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/bigfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
+        <state relative-caret-position="538">
+          <caret line="116" column="34" selection-start-line="116" selection-start-column="34" selection-end-line="116" selection-end-column="34" />
           <folding>
             <element signature="e#9#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sonFile4.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sonFile1.csv">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/tempFile.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5427" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sonFile4.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-276" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quicksort.py">
+    <entry file="file://$PROJECT_DIR$/SortedFile.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
+        <state relative-caret-position="-5427" />
       </provider>
     </entry>
   </component>

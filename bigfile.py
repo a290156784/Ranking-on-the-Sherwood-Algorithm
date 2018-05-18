@@ -5,9 +5,10 @@ import quicksort
 
 def copyTempToSortedFile():
     with open('tempFile.csv', 'r') as tempFile:
-        with open('SortedFile.csv', 'w+', newline='') as sortedFile:
-            reader = csv.reader(tempFile)
+        reader = csv.reader(tempFile)
+        with open('SortedFile.csv', mode='w+', newline='') as sortedFile:
             writer = csv.writer(sortedFile)
+
             for currentReadLine in reader:
                 writer.writerow(currentReadLine)
 
@@ -15,47 +16,58 @@ def copyTempToSortedFile():
 def mergeSonFile(sonFileNum):
     sonFileName = 'sonFile' + str(sonFileNum) + '.csv'
 
-    with open('tempFile.csv', 'w+', newline='') as tempFile:                # 将已排序的文件和一个新文件进行合并排序，并将结果存入tempFile.csv
+    with open('tempFile.csv', mode='w+', newline='') as tempFile:                # 将已排序的文件和一个新文件进行合并排序，并将结果存入tempFile.csv
+        writer = csv.writer(tempFile)
         with open('SortedFile.csv', 'r') as sortedFile:
+            sortedReader = csv.reader(sortedFile)
             with open(sonFileName, 'r') as sonFile:
-                    sortedReader = csv.reader(sortedFile)
                     sonReader = csv.reader(sonFile)
-                    writer = csv.writer(tempFile)
 
-                    sortedFileLine = next(sortedReader)
-                    sonFileLine = next(sonReader)
+                    try:
+                        sortedFileLine = next(sortedReader)
+                        sonFileLine = next(sonReader)
+                    finally:
+                        print('')
 
-                    sortedFileLengh = len(sortedFileLine)
-                    sonFileLengh = len(sortedFileLine)
 
                     while sortedFileLine and sonFileLine:
-                        currentSortedNum = int(sortedFileLine[sortedFileLengh - 1], 10)
-                        currentSonNum = int(sonFileLine[sonFileLengh - 1], 10)
+                        currentSortedNum = float(sortedFileLine[5])
+                        currentSonNum = float(sonFileLine[5])
 
                         if currentSortedNum >= currentSonNum:
                             writer.writerow(sortedFileLine)
-                            sortedFileLine = next(sortedReader)
+                            try:
+                                sortedFileLine = next(sortedReader)
+                            except StopIteration:
+                                break
 
                         else:
                             writer.writerow(sonFileLine)
-                            sonFileLine = next(sonReader)
+                            try:
+                                sonFileLine = next(sonReader)
+                            except StopIteration:
+                                break
 
                     while sortedFileLine:
                         writer.writerow(sortedFileLine)
-                        sortedFileLine = next(sortedReader)
+                        try:
+                            sortedFileLine = next(sortedReader)
+                        except StopIteration:
+                            break
 
                     while sonFileLine:
                         writer.writerow(sonFileLine)
-                        sonFileLine = next(sonReader)
-
-    copyTempToSortedFile()                                      # 调用函数将tempFile.csv内结果覆盖拷贝至排序结果文件中
+                        try:
+                            sonFileLine = next(sonReader)
+                        except StopIteration:
+                            break
 
 
 def copyFirstSonFileToSortedFile():
-    with open('SortedFile.csv', 'w+', newline='') as sortedFile:
+    with open('SortedFile.csv', mode='w+', newline='') as sortedFile:
+        writer = csv.writer(sortedFile)
         with open('sonFile1.csv', 'r') as sonFile1:
             reader = csv.reader(sonFile1)
-            writer = csv.writer(sortedFile)
             for currentReadLine in reader:
                 writer.writerow(currentReadLine)
 
@@ -65,7 +77,7 @@ def createSonFile(fileCount, tempList, lineCount):
 
     fileName = 'sonFile' + str(fileCount) + '.csv'
 
-    with open(fileName, 'w+', newline='') as file:
+    with open(fileName, mode='w+', newline='') as file:
         writer = csv.writer(file)
         for i in range(lineCount):
             writer.writerow(tempList[i])
@@ -97,8 +109,9 @@ def splitBigFile(filePath):
 
 def sortBigFile(filePath):
     fileCount = splitBigFile(filePath)
-    copyTempToSortedFile()
+    copyFirstSonFileToSortedFile()
 
     if fileCount != 1:
         for i in range((fileCount-1)):
             mergeSonFile((i+2))
+            copyTempToSortedFile()
