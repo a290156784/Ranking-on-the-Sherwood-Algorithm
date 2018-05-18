@@ -1,5 +1,4 @@
-#用来模拟外部排序
-import random
+# 模拟外部排序
 
 
 def copyTempToSortedFile():
@@ -12,7 +11,7 @@ def copyTempToSortedFile():
 def mergeSonFile(sonFileNum):
     sonFileName = 'sonFile' + str(sonFileNum) + '.txt'
 
-    with open('tempFile.txt', 'w+') as tempFile:
+    with open('tempFile.txt', 'w+') as tempFile:                # 将已排序的文件和一个新文件进行合并排序，并将结果存入tempFile.txt
         with open('SortedFile.txt', 'r') as sortedFile:
             with open(sonFileName, 'r') as sonFile:
 
@@ -43,7 +42,7 @@ def mergeSonFile(sonFileNum):
                         tempFile.write(sonFileLine)
                         sonFileLine = sonFile.readline()
 
-    copyTempToSortedFile()
+    copyTempToSortedFile()                                      # 调用函数将tempFile.txt内结果覆盖拷贝至排序结果文件中
 
 
 def copyFirstSonFileToSortedFile():
