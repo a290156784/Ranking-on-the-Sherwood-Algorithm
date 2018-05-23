@@ -9,7 +9,7 @@ topList = [['第一名', 'name', 'id', '一等奖学金'], ['第二名', 'name',
            ['第九名', 'name', 'id', '二等奖学金'], ['第十名', 'name', 'id', '二等奖学金']]
 
 
-def showTopStudent():
+def showTop10Student():
     print('名次'.ljust(10), '姓名'.ljust(10), '学号'.ljust(10), '奖学金'.ljust(10))
 
     with open('SortedFile.csv', 'r') as file:
@@ -38,5 +38,5 @@ if __name__ == '__main__':
     except BaseException:
         print('排序过程出现异常。如重新尝试后依然出现错误，请与我们取得联系。\n')
     else:
-        showTopStudent()
+        showTop10Student()
         print('\n\n完整排序文件已保存至 \'SortedFile.csv\'')
