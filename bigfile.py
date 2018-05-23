@@ -30,7 +30,7 @@ def mergeSonFile(sonFileNum):
                         print('')
 
 
-                    while sortedFileLine and sonFileLine:
+                    while True:
                         currentSortedNum = float(sortedFileLine[5])
                         currentSonNum = float(sonFileLine[5])
 
