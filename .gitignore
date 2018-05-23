@@ -1,0 +1,10 @@
+#运行过程中生成的文件
+sonFile*.csv
+SortedFile.csv
+tempFile.csv
+
+#以前版本的运行结果
+previousVerResult/*
+
+#IDE生成的异常日志文件
+__pycache__/*
